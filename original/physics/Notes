@@ -1,0 +1,43 @@
+create interfaces for the different kinds of forces to make a better
+framework for creating new kinds of forces
+
+unary force applies a force to all particles. Gravity is a unary force
+applying a vector field would also be a unary force.
+
+binary force applies between two particles, such as a spring.
+
+"spacial force" ?
+
+Types:
+None
+One
+All
+
+None - None - moot
+None - One - singly applied unary force
+None - All - globally applied unary force
+One - One - binary force
+One - All - globaly applied binary force
+All - All - globaly applied binary force (but different)
+
+
+none - one: simple force
+
+// this is a simple force for the world, like gravity.
+none - all: unary simple force
+
+one - one: binary force
+
+// would this really ever be necisary? edge case would be apply binary to all things
+one - all: world force?
+
+all - all: world force
+
+two kinds of forces
+unary forces - like gravity
+binary forces - like a spring
+
+apply to a particle, or to the world
+new Spring(start, end, etc)
+or
+new Spring(world, etc)
